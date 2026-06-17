@@ -74,7 +74,24 @@
       text-align: center;
     }
 
-    /* 📱 모바일 최적화 */
+    /* 🚬 꽁초 애니메이션 */
+    .cigarette {
+      position: fixed;
+      top: -50px;
+      font-size: 18px;
+      animation: fall 2s linear forwards;
+      pointer-events: none;
+      opacity: 0.8;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(100vh);
+        opacity: 0;
+      }
+    }
+
+    /* 📱 모바일 */
     @media (max-width: 600px) {
 
       .header {
@@ -131,6 +148,29 @@
   </div>
 
 </div>
+
+<!-- 🚬 꽁초 떨어지는 스크립트 -->
+<script>
+function createCigarette() {
+  const el = document.createElement("div");
+  el.className = "cigarette";
+  el.innerText = "🚬";
+
+  el.style.left = Math.random() * window.innerWidth + "px";
+
+  document.body.appendChild(el);
+
+  setTimeout(() => {
+    el.remove();
+  }, 2000);
+}
+
+window.onload = function() {
+  for (let i = 0; i < 7; i++) {
+    setTimeout(createCigarette, i * 200);
+  }
+};
+</script>
 
 </body>
 </html>
