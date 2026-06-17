@@ -165,11 +165,11 @@ function createCigarette() {
   }, 2000);
 }
 
-window.onload = function() {
+document.addEventListener("DOMContentLoaded", function() {
   for (let i = 0; i < 7; i++) {
     setTimeout(createCigarette, i * 200);
   }
-};
+});
 </script>
 
 </body>
