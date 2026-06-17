@@ -80,7 +80,7 @@
     .footer {
       margin-top: 40px;
       padding-top: 20px;
-      border-top: 1px dashed #ccc; /* 구분선 추가 */
+      border-top: 1px dashed #ccc;
       text-align: center;
     }
 
@@ -92,9 +92,9 @@
     }
 
     .suwon-logo {
-      width: 140px; /* 로고가 자연스럽게 보이도록 크기 지정 */
+      width: 140px;
       height: auto;
-      opacity: 0.85; /* 화면에 부드럽게 묻어나도록 투명도 살짝 적용 */
+      opacity: 0.85;
     }
 
     /* 🚬 꽁초 애니메이션 */
@@ -116,52 +116,22 @@
 
     /* 📱 모바일 */
     @media (max-width: 600px) {
-
-      .header {
-        padding: 25px 15px;
-      }
-
-      .mascot {
-        width: 90px;
-      }
-
-      .title {
-        font-size: 22px;
-      }
-
-      .container {
-        padding: 15px;
-      }
-
-      .notice {
-        padding: 20px;
-      }
-
-      .notice strong {
-        font-size: 20px;
-      }
-
-      iframe {
-        height: 380px;
-      }
-
-      .footer {
-        margin-top: 30px;
-      }
-
-      .suwon-logo {
-        width: 110px; /* 모바일에서는 로고 크기를 살짝 줄임 */
-      }
-
+      .header { padding: 25px 15px; }
+      .mascot { width: 90px; }
+      .title { font-size: 22px; }
+      .container { padding: 15px; }
+      .notice { padding: 20px; }
+      .notice strong { font-size: 20px; }
+      iframe { height: 380px; }
+      .footer { margin-top: 30px; }
+      .suwon-logo { width: 110px; }
     }
-
   </style>
 </head>
 
 <body>
 
 <div class="header">
-  <!-- 💡 깃허브 파일명에 맞춰 src="수원이.png" 또는 src="suwon.png"로 변경해 주세요 -->
   <img src="suwon.png" alt="수원이 마스코트" class="mascot">
   <div class="title">SUWON STATION</div>
   <div class="subtitle">흡연구역 안내 시스템</div>
@@ -178,7 +148,6 @@
     <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1dfK79nmDlIo-XPiK0v9GV7QnEL7EJpc&ehbc=2E312F&noprof=1"></iframe>
   </div>
 
-  <!-- 수원특례시 로고가 추가된 푸터 영역 -->
   <div class="footer">
     <div class="footer-text">수원역 인근 흡연구역 안내</div>
     <img src="suwon_logo.png" alt="수원특례시" class="suwon-logo">
@@ -186,22 +155,15 @@
 
 </div>
 
-<!-- 🚬 꽁초 떨어지는 스크립트 -->
 <script>
 function createCigarette() {
   const el = document.createElement("div");
   el.className = "cigarette";
   el.innerText = "🚬";
-
   el.style.left = Math.random() * window.innerWidth + "px";
-
   document.body.appendChild(el);
-
-  setTimeout(() => {
-    el.remove();
-  }, 2000);
+  setTimeout(() => { el.remove(); }, 2000);
 }
-
 document.addEventListener("DOMContentLoaded", function() {
   for (let i = 0; i < 7; i++) {
     setTimeout(createCigarette, i * 200);
