@@ -14,9 +14,16 @@
     }
 
     .header {
-      padding: 60px 20px 30px;
+      padding: 40px 20px 30px;
       border-bottom: 2px solid #000;
       text-align: center;
+    }
+
+    /* 🐸 수원이 캐릭터 스타일 */
+    .mascot {
+      width: 120px;
+      height: auto;
+      margin-bottom: 10px;
     }
 
     .title {
@@ -95,7 +102,12 @@
     @media (max-width: 600px) {
 
       .header {
-        padding: 30px 15px;
+        padding: 25px 15px;
+      }
+
+      /* 모바일에서는 캐릭터 크기를 살짝 줄임 */
+      .mascot {
+        width: 90px;
       }
 
       .title {
@@ -126,6 +138,7 @@
 <body>
 
 <div class="header">
+  <img src="수원이.png" alt="수원이" class="mascot">
   <div class="title">SUWON STATION</div>
   <div class="subtitle">흡연구역 안내 시스템</div>
 </div>
@@ -140,6 +153,7 @@
   <div class="map">
     <iframe 
       src="https://www.google.com/maps/d/u/0/embed?mid=1dfK79nmDlIo-XPiK0v9GV7QnEL7EJpc&ehbc=2E312F&noprof=1">
+    </table>
     </iframe>
   </div>
 
@@ -149,7 +163,6 @@
 
 </div>
 
-<!-- 🚬 꽁초 떨어지는 스크립트 -->
 <script>
 function createCigarette() {
   const el = document.createElement("div");
