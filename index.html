@@ -13,7 +13,7 @@
       color: #000000;
     }
 
-    /* 🐸 수원이와 타이틀을 가로로 정렬하기 위한 헤더 스타일 수정 */
+    /* 🐸 수원이와 타이틀을 가로로 정렬하기 위한 헤더 스타일 */
     .header {
       padding: 40px 20px 30px;
       border-bottom: 2px solid #000;
@@ -25,10 +25,10 @@
 
     /* 글자 영역을 묶어주는 컨테이너 */
     .title-group {
-      text-align: left; /* 캐릭터 옆에 있으므로 왼쪽 정렬이 자연스럽습니다 */
+      text-align: left;
     }
 
-    /* 🐸 수원이 캐릭터 스타일 (문장 옆에 맞게 크기 최적화) */
+    /* 🐸 수원이 캐릭터 스타일 */
     .mascot {
       width: 80px;
       height: auto;
@@ -40,12 +40,6 @@
       font-weight: 700;
       letter-spacing: -0.5px;
       line-height: 1.2;
-    }
-
-    .subtitle {
-      font-size: 14px;
-      margin-top: 5px;
-      color: #555;
     }
 
     .container {
@@ -131,11 +125,11 @@
       }
 
       .mascot {
-        width: 60px; /* 모바일에서는 옆에 놓였을 때 안 가려지도록 캐릭터를 조금 더 축소 */
+        width: 60px;
       }
 
       .title {
-        font-size: 20px;
+        font-size: 22px; /* 모바일에서도 한글 타이틀이 알맞게 보이도록 조절 */
       }
 
       .container {
@@ -171,9 +165,8 @@
   <img src="suwon.png" alt="수원이 마스코트" class="mascot">
   
   <div class="title-group">
-    <div class="title">Suwon station Smoking Zone</div>
-    <div class="subtitle">흡연구역 안내 시스템</div>
-  </div>
+    <div class="title">수원역 흡연구역 안내</div>
+    </div>
 </div>
 
 <div class="container">
